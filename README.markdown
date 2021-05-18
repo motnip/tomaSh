@@ -6,8 +6,6 @@ A collection of aliases and functions that help you speed up your programmer's e
   
 ## Documentation
 
-[Documentation](https://linktodocumentation)
-
 This project as three files:
 - bash_alias
 - bash_functions
