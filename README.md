@@ -73,13 +73,31 @@ And if I want to list all the pods?
 ``` bash
 alias kclp='kc get pods'
 ```
-
 ### Bash functions
 This files contains a list of command that are quite complex to alieses.
 
 <work> in progess...</work>
-## Badges
 
+## How to install
+Rename the file from bash_functions to .bash_functions and copy this snippet in your .*rc file or profile and source it! Enjoy!
+
+```bash
+#########################
+#     ALIAS
+#########################
+if [ -f ".bash_aliases" ]; then
+	source .bash_aliases
+fi
+
+#########################
+#      FUNCTION
+#########################
+if [ -f ".bash_functions" ]; then
+	source .bash_functions
+fi
+```
+
+## Badges
 Add badges from somewhere like: [shields.io](https://shields.io/)
 
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
