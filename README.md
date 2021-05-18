@@ -1,2 +1,2 @@
 # tomaSh
-My personal bash, a collection on aliases and functions that help you to speed up your programmer everyday life!
+My bash, a collection of aliases and functions that help you speed up your programmer's everyday life!
