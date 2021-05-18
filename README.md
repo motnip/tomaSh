@@ -2,11 +2,7 @@
 # TomaSh
 A collection of aliases and functions that help you speed up your programmer's everyday life!
 
-
-  
 ## Documentation
-
-[Documentation](https://linktodocumentation)
 
 This project as three files:
 - bash_alias
@@ -65,7 +61,7 @@ rather than docker-compose up -d
 
 #### Kuberntes
 Same problem of docker...
-The Kubernest CLI has a long command kubecl, so there you go:
+The Kubernest CLI has a long command kubectl, so there you go:
 ``` bash
 alias kc='kubectl'
 ```
@@ -106,5 +102,9 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 ## Authors
 
 - [@motnip](https://www.github.com/motnip)
+
+I created this readme with [readme.so](https://readme.so/) 
+
+
 
   
