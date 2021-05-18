@@ -57,13 +57,13 @@ The output is:
 
 To start up a docker compose just type:
 ``` bash
-$dkcomp -d
+$ dkcomp -d
 ```
 rather than docker-compose up -d
 
 #### Kuberntes
 Same problem of docker...
-The Kubernest CLI has a long command kubecl, so there you go:
+The Kubernest CLI has a long command kubectl, so there you go:
 ``` bash
 alias kc='kubectl'
 ```
