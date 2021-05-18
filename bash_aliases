@@ -5,7 +5,7 @@
 # ---------------------------#
 
 ######################
-#	ALIAS COMANDI	#
+#	COMMAND	#
 ######################
 #Shortcut to home
 alias h='cd ~'
@@ -30,7 +30,7 @@ alias fgrep='fgrep --color=auto'              # show differences in colour
 
 alias vim='mvim'
 ##########################
-#	ALIAS SHORTCUT PATH	#
+#	SHORTCUT PATH	#
 ##########################
 
 #There are shortcut to working folder
@@ -82,6 +82,7 @@ alias dkps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Status
 alias dkils="docker image ls -a"
 #List Docker containers
 alias dkcls="docker container ls -a"
+alias dkcomp="docker-compse up"
 #########################
 #     KUBERNETES        #
 #########################
