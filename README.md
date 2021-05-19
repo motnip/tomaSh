@@ -75,7 +75,7 @@ This files contains a list of command that are quite complex to alieses.
 <work> in progess...</work>
 
 ## How to install
-Rename the file from bash_functions to .bash_functions and copy this snippet in your .*rc file or profile and source it! Enjoy!
+Rename the file from bash_[functions, alias, envart] to .bash_[functions, alias, envart] and copy this snippet in your .*rc file or profile and source it! Enjoy!
 
 ```bash
 #########################
