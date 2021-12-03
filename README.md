@@ -100,7 +100,9 @@ fi
   
 ## Authors
 
-- [@motnip](https://www.github.com/motnip)
+- [@motnip on Twitter](https://twitter.com/motnip)
+- [@motnip on StackOverflow](https://stackoverflow.com/users/7395303/tomas-pinto)
+- [@motnip on LinkdIn](www.linkedin.com/in/tomas-pinto-motnip)
 
 I created this readme with [readme.so](https://readme.so/) 
 
