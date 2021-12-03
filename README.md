@@ -51,7 +51,7 @@ One of the longest commad is
 ``` bash
 alias dkps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Status}}\t{{.Port}}"'
 ```
-The output is:
+That command shows in a glace the most usefull information (id, docker image, name, status and port) of all docker container running.
 
 To start up a docker compose just type:
 ``` bash
