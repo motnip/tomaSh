@@ -44,6 +44,15 @@ alias gcl='git log --pretty=format:"%h %cn %cd %s" -n 10'
 alias grt="git restore --staged"
 ```
 
+``` bash
+#Git commit and show the diff before write the commit message
+alias gcv='git commit -v'
+```
+
+``` bash
+#Reset the last commit but put the code in stage
+alias grs='git reset --soft'
+```
 #### Docker
 A docker command usually is quite long (number of characters) has more than one option and more than one parameters. 
 We are developers and we don't like repetitive things, so I try to wrap up some command.
@@ -57,8 +66,17 @@ To start up a docker compose just type:
 ``` bash
 $dkcomp -d
 ```
-rather than docker-compose up -d
+rather than docker-compose up
 
+``` bash
+#Stops a container id and remove the container and the image
+function dkclean 
+```
+
+``` bash
+#Lists all the container present on your machine
+$dkcls
+```
 #### Kuberntes
 Same problem of docker...
 The Kubernest CLI has a long command kubectl, so there you go:
@@ -72,7 +90,15 @@ alias kclp='kc get pods'
 ### Bash functions
 This files contains a list of command that are quite complex to alieses.
 
-<work> in progess...</work>
+Open a folder and list its content in one commnad
+``` bash
+$cdl
+```
+
+``` bash
+#Function that run grep in ignore case mode -i and list all the results
+$gl 
+```
 
 ## How to install
 Rename the file from bash_[functions, alias, envart] to .bash_[functions, alias, envart] and copy this snippet in your .*rc file or profile and source it! Enjoy!
