@@ -66,6 +66,7 @@ alias gb="git branch"
 alias gd="git diff"
 alias ga="git add"
 alias gf="git fetch"
+alias gp="git push"
 #Unstaged files
 alias grt="git restore --staged"
 #Reset all the changes
