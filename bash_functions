@@ -60,6 +60,10 @@ function gshowfile {
  git show --pretty=short --name-only $1
 }
 
+function gps {
+ 	git push --set-upstream origin $(git branch --show-current)
+}
+
 ########################
 # DOCKER FUNCTIONS     #
 #######################
@@ -84,9 +88,15 @@ function dklog {
 
 #Start a docker compose 
 function dkcompose {
- docker-compose -f $1 up $2 
-}
+  if [ -z $1 ]
+  	then 
+		file='.'
+ 	else
+ 		file=$1
+  fi
 
+  docker-compose -f $file up
+}
 ###########################
 #       KUBERNETES        #
 ###########################
