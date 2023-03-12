@@ -57,6 +57,8 @@ alias gitc="git commit"
 alias gcv="git commit -v"
 #List the first 10 commit in the given format:
 alias gcl='git log --pretty=format:"%h %cn %cd %s" -n 10'
+#Shows files edited by commit
+alias gff='git log --name-status origin/master..'
 #List commits in the given format :
 alias gln='git log --pretty=format:"%h %cn %cd %s"'
 alias gc='git checkout'
@@ -73,17 +75,18 @@ alias grt="git restore --staged"
 alias grh="git reset --hard"
 #Reset all the changes and put them in staged status
 alias grs="git reset --soft"
+alias grm="git rebase master"
 ########################
 #    DOCKER            #
 ########################
 alias dknet="docker login "
 alias dkinsp="docker inspect "
-alias dkps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Status}}\t{{.Port}}"'
+alias dkps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Status}}\t{{.Ports}}"'
 #List Docker images
 alias dkils="docker image ls -a"
 #List Docker containers
 alias dkcls="docker container ls -a"
-alias dkcomp="docker-compse up"
+alias dkcomp="docker-compose up"
 #########################
 #     KUBERNETES        #
 #########################
@@ -102,3 +105,8 @@ alias kccm='kc get configmaps'
 #Map the MongoDB's pod port 27017 on local port 27017
 #Example: kcpf mongo-0 27021:27017
 alias kcpf='kubectl port-forward'
+#########################
+#     KUBERNETES        #
+#########################
+#gradle Spring Boot run
+alias gbr='gradle bootRun'
