@@ -50,10 +50,13 @@ alias gcv='git commit -v'
 ```
 
 ``` bash
-#Git push a new branch 
-alias gcv='git commit -v'
+#Git push a new branch (you don't need to type the branch name)
+gps 
 ```
-
+instead of
+```
+git push --set-upstream origin branch-name
+```
 
 ``` bash
 #Reset the last commit but put the code in stage
@@ -124,6 +127,13 @@ if [ -f ".bash_functions" ]; then
 	source .bash_functions
 fi
 ```
+
+## Update
+13/03/2023 
+- Add function ```gps``` (git push)
+- Add function ```grm``` (git rebase master)
+- Add function ```gff``` (git current branc with master) 
+
 
 ## License
 
