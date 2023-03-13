@@ -50,6 +50,12 @@ alias gcv='git commit -v'
 ```
 
 ``` bash
+#Git push a new branch 
+alias gcv='git commit -v'
+```
+
+
+``` bash
 #Reset the last commit but put the code in stage
 alias grs='git reset --soft'
 ```
@@ -58,7 +64,7 @@ A docker command usually is quite long (number of characters) has more than one 
 We are developers and we don't like repetitive things, so I try to wrap up some command.
 One of the longest commad is
 ``` bash
-alias dkps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Status}}\t{{.Port}}"'
+alias dkps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Status}}\t{{.Ports}}"'
 ```
 That command shows in a glace the most usefull information (id, docker image, name, status and port) of all docker container running.
 
@@ -66,7 +72,7 @@ To start up a docker compose just type:
 ``` bash
 $dkcomp -d
 ```
-rather than docker-compose up
+rather than docker-compose up -d
 
 ``` bash
 #Stops a container id and remove the container and the image
