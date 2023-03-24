@@ -95,7 +95,7 @@ function dkcompose {
  		file=$1
   fi
 
-  docker-compose -f $file up
+  docker-compose -f $file up $2
 }
 ###########################
 #       KUBERNETES        #
