@@ -29,6 +29,13 @@ alias egrep='egrep --color=auto'              # show differences in colour
 alias fgrep='fgrep --color=auto'              # show differences in colour
 
 alias vim='mvim'
+
+##########################
+#        GRADLE          #
+##########################
+
+#gradle Spring Boot run
+alias gbr='gradle bootRun'
 ##########################
 #	SHORTCUT PATH	#
 ##########################
@@ -68,7 +75,7 @@ alias gb="git branch"
 alias gd="git diff"
 alias ga="git add"
 alias gf="git fetch"
-alias gp="git push"
+alias gp="git pull"
 #Unstaged files
 alias grt="git restore --staged"
 #Reset all the changes
@@ -105,8 +112,4 @@ alias kccm='kc get configmaps'
 #Map the MongoDB's pod port 27017 on local port 27017
 #Example: kcpf mongo-0 27021:27017
 alias kcpf='kubectl port-forward'
-#########################
-#     KUBERNETES        #
-#########################
-#gradle Spring Boot run
-alias gbr='gradle bootRun'
+
