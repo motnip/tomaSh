@@ -1,0 +1,73 @@
+#! /bin/sh
+
+# An example hook script to verify what is about to be pushed.  Called by "git
+# push" after it has checked the remote status, but before anything has been
+# pushed.  If this script exits with a non-zero status nothing will be pushed.
+#
+# This hook is called with the following parameters:
+#
+# $1 -- Name of the remote to which the push is being done
+# $2 -- URL to which the push is being done
+#
+# If pushing without using a named remote those arguments will be equal.
+#
+# Information about the commits which are being pushed is supplied as lines to
+# the standard input in the form:
+#
+#   <local ref> <local oid> <remote ref> <remote oid>
+#
+# This sample shows how to prevent push of commits where the log message starts
+# with "WIP" (work in progress).
+#
+#Color schema reference: https://dev.to/ifenna__/adding-colors-to-bash-scripts-48g4
+REDBOLD="\e[1;41;33m"
+OKBOLD="\e[1;97;42m"
+ECHOPACKAGE="\e[1;97;43m"
+ENDCOLOR="\e[0m"
+
+echo $(printf "\e[1m checking style....")
+
+./gradlew checkstyleMain
+
+if [ $? = 0 ] 
+then
+	echo " "
+	echo $(printf "${OKBOLD}check style succeed! Let's check the tests... ${ENDCOLOR}")
+	echo " "
+else [ $? = 1 ]
+	echo " "
+	echo $(printf "${REDBOLD} You better fix the style! ${ENDCOLOR}")
+	echo " "
+	exit 1;
+fi
+
+
+echo $(printf "\e[1m Running integration test per User ....")
+
+exec < /dev/tty
+read -p 'Packege to test (packege name or * will run all the tests or skip to skip): ' package
+
+packageToTest="io.kadmos.banking.$package.*"
+
+if [ "$package" != "skip" ];
+then
+	echo $(printf "${ECHOPACKAGE} Testing  package: $packageToTest ${ENDCOLOR}")
+
+	#./gradlew test --tests 'io.kadmos.userdata.$package.*'
+	./gradlew test --tests $packageToTest
+else
+	echo $(printf "${ECHOPACKAGE} Tests skipped")
+fi
+
+if [ $? = 0 ] 
+then
+	echo " "
+	echo $(printf "${OKBOLD} All good, you can PUSH! ${ENDCOLOR}")
+	echo " "
+else [ $? = 1 ]
+	echo " "
+	echo $(printf "${REDBOLD} You better fix tests! ${ENDCOLOR}")
+	echo " "
+	exit 1;
+fi
+
